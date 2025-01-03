@@ -1,0 +1,77 @@
+.header__container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.menu,
+.menu::after {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  background-color: var(--primary-bg);
+  transition: left 0.3s ease;
+}
+.menu {
+  height: 100%;
+  padding-block: 7.5rem 2.5rem;
+  overflow-y: auto;
+}
+.menu li,
+.menu a {
+  width: 100%;
+}
+.menu a {
+  text-align: end;
+}
+.menu::after {
+  content: '';
+  height: 6rem; /* 96/16 */
+}
+.open-menu .menu,
+.open-menu .menu::after {
+  left: 0;
+}
+.menu ul {
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 2rem;
+  font-size: 2rem;
+}
+
+.open-menu body {
+  overflow: hidden;
+}
+
+.icon-menu {
+  display: flex;
+  flex-basis: 1.875rem;
+  width: 1.875rem;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.icon-menu::before,
+.icon-menu::after {
+  content: '';
+  height: 0.25rem;
+  width: 100%;
+  background-color: var(--link-bg);
+  transition: transform 0.3s ease;
+}
+.icon-menu span {
+  height: 0.25rem;
+  width: 100%;
+  background-color: var(--link-bg);
+  transition: width 0.3s ease, margin-block 0.3s ease, height 0.3s ease;
+  margin-block: 0.375rem;
+}
+.open-menu .icon-menu span {
+  width: 0;
+  margin-block: 0;
+  height: 0;
+}
+.open-menu .icon-menu::before {
+  transform: rotate(45deg) translateY(0.1875rem);
+}
+.open-menu .icon-menu::after {
+  transform: rotate(-45deg) translateY(-0.1875rem);
+}

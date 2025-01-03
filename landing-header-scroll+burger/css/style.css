@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: #fff;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 120px;
+  background: #11141a;
+  display: flex;
+  justify-content: space-between;
+  z-index: 50;
+  text-decoration: none;
+}
+.logo {
+  font-size: 25px;
+  font-weight: 600;
+}
+nav a {
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.3s;
+}
+nav a:hover,
+nav a.active {
+  color: #0ef;
+}
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1f242d;
+  font-size: 100px;
+  font-weight: 700;
+}
+section:nth-of-type(even) {
+  background: #323946;
+}
