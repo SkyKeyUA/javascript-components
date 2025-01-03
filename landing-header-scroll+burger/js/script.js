@@ -52,9 +52,9 @@ window.onscroll = () => {
     let id = sec.getAttribute('id');
     if (top >= offset && top < offset + height && id !== null) {
       headerLinks?.forEach((links) => {
-        links?.classList.remove('menu__active');
+        links?.classList.remove('active');
         if (id !== 'contact') {
-          document.querySelector('header a[href*=' + id + ']').classList.add('menu__active');
+          document.querySelector('header a[href*=' + id + ']').classList.add('active');
         }
       });
     }
